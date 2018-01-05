@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCQ-Nm-bIN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMapViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TJF-PT-JEg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TJF-PT-JEg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6bo-Bj-aey"/>
+                            <constraint firstItem="TJF-PT-JEg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BsD-uM-pLp"/>
+                            <constraint firstItem="TJF-PT-JEg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fLL-64-WEQ"/>
+                            <constraint firstItem="TJF-PT-JEg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="red-uI-JWd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NVi-kx-QOm"/>
+                    <connections>
+                        <outlet property="myMapView" destination="TJF-PT-JEg" id="cjz-LD-Rpn"/>
+                        <segue destination="69Y-NA-plZ" kind="show" identifier="detailSegue" id="y7s-be-1zx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="133"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="CEz-E8-Vci">
+            <objects>
+                <viewController id="69Y-NA-plZ" customClass="DetailViewController" customModule="MyMapViewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRb-e5-qwp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ชื่อสถานที่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ0-fM-0NJ">
+                                <rect key="frame" x="16" y="149" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ถนน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ue-4y-UDf">
+                                <rect key="frame" x="16" y="178" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตำแหน่ง Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUM-Te-u5b">
+                                <rect key="frame" x="16" y="207" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตำแหน่ง Longtitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewf-pX-rXw">
+                                <rect key="frame" x="16" y="236" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ewf-pX-rXw" firstAttribute="top" secondItem="dUM-Te-u5b" secondAttribute="bottom" constant="8" id="5Fu-1W-cIG"/>
+                            <constraint firstItem="4ue-4y-UDf" firstAttribute="top" secondItem="QZ0-fM-0NJ" secondAttribute="bottom" constant="8" id="9bx-QX-r4T"/>
+                            <constraint firstItem="4ue-4y-UDf" firstAttribute="leading" secondItem="QZ0-fM-0NJ" secondAttribute="leading" id="B15-i5-tYN"/>
+                            <constraint firstItem="dUM-Te-u5b" firstAttribute="leading" secondItem="4ue-4y-UDf" secondAttribute="leading" id="Cvk-BQ-ily"/>
+                            <constraint firstItem="ewf-pX-rXw" firstAttribute="leading" secondItem="dUM-Te-u5b" secondAttribute="leading" id="W0u-bL-lIW"/>
+                            <constraint firstItem="dUM-Te-u5b" firstAttribute="top" secondItem="4ue-4y-UDf" secondAttribute="bottom" constant="8" id="YCp-e1-93i"/>
+                            <constraint firstItem="4ue-4y-UDf" firstAttribute="trailing" secondItem="QZ0-fM-0NJ" secondAttribute="trailing" id="gfY-Yi-kX6"/>
+                            <constraint firstItem="dUM-Te-u5b" firstAttribute="trailing" secondItem="4ue-4y-UDf" secondAttribute="trailing" id="k92-CJ-scl"/>
+                            <constraint firstItem="ewf-pX-rXw" firstAttribute="trailing" secondItem="dUM-Te-u5b" secondAttribute="trailing" id="o1F-L9-Ekx"/>
+                            <constraint firstItem="QZ0-fM-0NJ" firstAttribute="top" secondItem="v46-es-f2J" secondAttribute="top" constant="85" id="v2Q-Z8-ysE"/>
+                            <constraint firstItem="v46-es-f2J" firstAttribute="trailing" secondItem="QZ0-fM-0NJ" secondAttribute="trailing" constant="16" id="wMY-hZ-xmh"/>
+                            <constraint firstItem="QZ0-fM-0NJ" firstAttribute="leading" secondItem="v46-es-f2J" secondAttribute="leading" constant="16" id="wjk-Jl-czF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v46-es-f2J"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationLat" destination="dUM-Te-u5b" id="IKz-1q-k0M"/>
+                        <outlet property="locationLong" destination="ewf-pX-rXw" id="yse-V2-x8r"/>
+                        <outlet property="locationName" destination="QZ0-fM-0NJ" id="OzL-E3-Yze"/>
+                        <outlet property="locationStreet" destination="4ue-4y-UDf" id="FoW-IZ-oKJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LL8-ie-uJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Uhj-6n-gCC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCQ-Nm-bIN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kte-3C-Dxg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YV5-WB-Nxa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRq-Rl-h98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492" y="133"/>
+        </scene>
+    </scenes>
+</document>
